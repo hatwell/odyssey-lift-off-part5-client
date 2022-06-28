@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import GlobalStyles from './styles';
-import Pages from './pages';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import React from "react";
+import ReactDOM from "react-dom";
+import GlobalStyles from "./styles";
+import Pages from "./pages";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'https://odyssey-lift-off-part5-server.herokuapp.com/', // TODO: change this to your server URL!
+  uri: "https://apollo-graphql-tutorial.herokuapp.com/", // TODO: change this to your server URL!
   cache: new InMemoryCache(),
 });
 
@@ -14,5 +14,5 @@ ReactDOM.render(
     <GlobalStyles />
     <Pages />
   </ApolloProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
